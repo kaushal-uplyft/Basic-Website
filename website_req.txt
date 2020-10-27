@@ -1,0 +1,13 @@
+------------ From Client Side  ------------
+
+1) Services should be selected in fitness_center
+2) About Us
+3) Transformation img in app ( optional )
+4) fb,insta,youtube link
+5) phone number, whatsapp number, email, address
+
+---------------  From social media team  -------------
+
+1) Banner img according to gym type ( Trainer, yoga, nutrition, Dance ) and logo color
+2) there are some icons which need to be change acording to color
+3) Footer img according to logo color
