@@ -1,0 +1,1243 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eat Without Guilt</title>
+    <!-- All Meta Details-->
+    <meta charset="utf-8">
+    <meta name="description" content="Dietitian is expert Nutritionist, an eminent healthcare professional with many years of experience in Nutrition Solutions Industry. ">
+    <meta name="keywords" content="Best Nutrition in india , best dietitian in delhi">
+    <meta name="author" content="Eat Without Guilt">
+    <meta name="viewport" content="width=device-width">
+    <meta name="revisit-after" content="3 days"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/leaf.png" type="image/x-icon">
+
+
+    <!-- Extrernal CDNs -->
+<!--    https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+        <!-- Local Css Files Which are compressd here using Django Compressor -->
+
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+    <!-- Responsive -->
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet"/>
+
+    <!-- Datetimepicker -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <style>
+        .alert {
+            position: fixed;
+            bottom: 0;
+            z-index: 100;
+            right: 20px;
+            display: none;
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+
+<!--
+<div class="preloader" id="overlay" style="z-index: 10000000000">
+    <div class="loader">
+
+        <div class="loader__figure" style=""></div>
+        <H4 class="loader__label" style="color:white;"></H4>
+    </div>
+</div>
+-->
+
+<div id="mySidenav" class="sidenav">
+    <div class="bg-primary" style="height: 50px;">
+        
+            <h5 class="font-medium m-0 text-left">
+                &nbsp;REGISTER
+            </h5>
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <div class="col-md-12 row text-center">
+        <div style="height:30px !important" class="m-t-1">
+            <div class="alert col-md-12 text-left m-0" style="padding: 4px 15px;">
+                <h6 class="message m-0" style="color:#c9231e;text-transform: capitalize !important;"></h6>
+            </div>
+        </div>
+        <form method="get" action="#" id="form_register" autocomplete="off" style="margin-top: 0px !important;">
+            <input type="hidden" name="csrfmiddlewaretoken" value="NYCNxhK96jTOv1CmuDEJoRCvyEcu1bFDb35KjIXoqnBnAl9FSnFzDsscgQCkYJNq">
+            <div class=" form-group col-md-12 m-0">
+                <label class=" col-md-12  row text-left font-medium">Country *</label>
+                <select name="ccode" id="country_code" class="no-border select_country col-md-12" required
+                        style="margin-top:0px">
+                    <option value="0"> Select Country</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12 m-0">
+                <label class="col-md-12 row  text-left font-medium">Phone Number *</label>
+                <input type="number" name="username" placeholder="Phone Number" id="user_phone" class="col-md-12"
+                       style="margin-top:0px"
+                       value="" autocomplete="off">
+                
+            </div>
+            <input type="hidden" name="csrfmiddlewaretoken" value="NYCNxhK96jTOv1CmuDEJoRCvyEcu1bFDb35KjIXoqnBnAl9FSnFzDsscgQCkYJNq">
+            
+                <div class="col-md-12 m-0" style="padding-top: 15px;padding-left:0px;">
+                    <a href="#" class="verfy_otp theme-btn btn-style-one bg-primary text-white"
+                       style="font-size:11px;padding:3px 15px; margin-bottom: 50px !important;">Send
+                        Otp</a>
+                </div>
+            
+            <div class="clearfix"></div>
+            <div id="user_otp_div" class="m-0">
+                <div class="col-md-12 m-0 p-t-1">
+                    <h5 class=" text-left font-medium p-l-0">Enter OTP</h5>
+                </div>
+                <div class="col-md-12 m-0">
+                    <input type="number" name="user_otp" id="user_otp" value=""
+                           style="padding-top: 6px;margin-top: 0;">
+                </div>
+                <div class="col-md-12 m-0" style="padding-top:10px">
+                    <a href="#" class="verfy_otp_1 theme-btn btn-style-one bg-primary text-white m-0"
+                       style="font-size:11px;padding: 3px 15px;margin-bottom: 50px !important;">Verify</a>
+                </div>
+            </div>
+            <div class="form-group col-md-12 m-0 partial_info">
+                <label class="col-md-12 row  text-left font-medium">First Name *</label>
+                <input type="text" name="firstname" value=""
+                       required>
+            </div>
+            <div class="form-group col-md-12 m-0  partial_info">
+                <label class="col-md-12 row  text-left font-medium">Last Name *</label>
+                <input type="text" name="lastname" value=""
+                       required>
+            </div>
+            <div class="form-group col-md-12 m-0  partial_info">
+                <label class="col-md-12 row  text-left font-medium">Email</label>
+                <input type="email" name="email" value=""
+                >
+            </div>
+            <div class="form-group col-md-12 m-0  partial_info">
+                <label class="col-md-12 row  text-left font-medium">Gender *</label>
+                <select name="usergender" value="" id="usergender" required>
+                    <option value="0">Select Gender</option>
+                    <option value="Male"> Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12 partial_info">
+                <label class="col-md-12 row  text-left font-medium">Goal *</label>
+                <select name="goal" required>
+                    <option value="0">Select Goal</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option value="Weight Gain"> Weight Gain</option>
+                    <option value="Weight Maintenance">Weight Maintenance</option>
+                    <option value="Disease Management">Disease Management</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12 partial_info register_button m-0" style="text-align: center">
+                
+                    <div class="form-group">
+                        <button type="submit" class="theme-btn btn-style-one bg-primary text-white m-0 col-md-12"
+                                style="height: 25px;text-align: center;padding: 0px;">
+                            Register</button>
+                    </div>
+                
+            </div>
+            <div class=" col-md-12 " style="bottom: 10% !important;">
+                <img src="images/login.svg" alt="Eat Without Guilt - Login" style="height: 140px;width: 180px">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="page-wrapper">
+
+<!--    <div class="preloader"></div>-->
+    <!-- Main Header-->
+    <header class="main-header">
+        <!-- Header Top -->
+        <div class="header-top">
+
+
+            <!-- The Static Socail Links on Left -->
+
+            <div class="callimg">
+                <a href="tel: +91-9899199767">
+                    <img src="images/home/strip.png" alt="Eat Without Guilt"></a>
+
+
+            </div>
+
+
+            <div class="footer-social-links side-social-links hidden-sm">
+                <ul style="list-style: none;">
+                    <li id="bar" style="display: block; margin: 3px 0px;"><a
+                            href="https://www.facebook.com/EAT-without-GUILT-103521464681387/" target="_blank"><i
+                            style="color: #343f19" class="fa fa-facebook hvr-pulse" data-toggle="tooltip"
+                            data-placement="right" title="Tooltip on right"></i></a></li>
+                    <li id="bar" style="display: block; margin: 3px 0px;"><a
+                            href="None" target="_blank"><i style="color: #343f19"
+                                                                                          class="fa fa-twitter hvr-pulse"></i></a>
+                    </li>
+                    <li id="bar" style="display: block; margin: 3px 0px;"><a
+                            href="https://www.instagram.com/invites/contact/?i=1e6c1eu3tl84h&amp;utm_content=4zzkwy0" target="_blank"><i
+                            style="color: #343f19" class="fa fa-instagram hvr-pulse"></i></a></li>
+                    <li id="bar" style="display: block; margin: 3px 0px;" class="whats-num"><a
+                            href="https://api.whatsapp.com/send?phone=+91-9899199767&text=Hi" target="_blank"><i
+                            style="color: #343f19;" class="fa fa-whatsapp"></i></a></li>
+                    <li id="bar" style="display: block; margin: 3px 0px;"><a
+                            href="None"><i
+                            style="color: #343f19;" class="fa fa-youtube"></i></a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Main Box -->
+            <div class="main-box">
+                <div class="auto-container">
+                    <div class="outer-container clearfix">
+                        <!--Logo Box-->
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/home/header_icon.png"
+                                                                              style="height: 50px!important;"
+                                                                              alt="Eat Without Guilt"> </a>
+                            </div>
+                        </div>
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                            data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        
+                                        <li><a href="testimonial_SS.html">Success Stories</a></li>
+
+                                        <li class="dropdown"><a href="/">Services</a>
+                                            <ul id="fellow">
+                                                
+                                                    <li>
+                                                        <a href="Weight-Loss-Program.html">Weight Loss Program 
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Weight-Gain-Program.html">Weight Gain Program 
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Monsoon-Diet.html">Monsoon Diet 
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="PCODorPCOS.html">Pcod/Pcos
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Child-Nutrition.html">Child Nutrition
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Thyroid-Disorder.html">Thyroid Disorder
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Diabetes-management.html">Diabetes Management
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="High-Lipid-and-Cholesterol.html">High Lipid And Cholesterol
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="pregnancy-and-lactation.html">Pregnancy And Lactation 
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="Hypertension-Diet.html">Hypertension Diet
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a href="blogs_health.html">Health Feed</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li class="before_login"
+                                            >
+                                            <button href="#" onclick="openNav()"
+                                                    class="theme-btn btn-style-three text-white"
+                                                    style="padding: 7px 12px;border: 2px solid white  !important;">
+                                                Register
+                                            </button>
+                                        </li>
+                                        <li class="dropdown after_login"
+                                            style="display: none" ><a
+                                                href="/">Hi, <span class="name"></span></a>
+                                            <ul id="fellow">
+                                                
+                                                <li>
+                                                    <a href="/clients/logout">Logout
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav><!-- Main Menu End-->
+
+                        </div><!--Nav Outer End-->
+
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--End Main Header -->
+
+
+    <!-- Hidden Navigation Bar -->
+    <section class="hidden-bar right-align">
+
+        <div class="hidden-bar-closer">
+            <button class="btn"><i class="fa fa-close"></i></button>
+        </div>
+
+        <!-- Hidden Bar Wrapper -->
+        <div class="hidden-bar-wrapper">
+
+            <!-- .logo -->
+            <div class="logo text-center">
+                
+            </div><!-- /.logo -->
+
+            <!-- .Side-menu -->
+            <div class="side-menu ">
+                <!-- .navigation -->
+                <ul class="navigation">
+                    <li class=""><a href="index.html">Home</a></li>
+                    <li class=""><a href="about.html">About Us</a></li>
+                    <li class="dropdown"><a href="#">Services</a>
+                        <ul>
+                            <ul>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Weight-Loss-Program.html"
+                                           class="text-black">Weight Loss Program 
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Weight-Gain-Program.html"
+                                           class="text-black">Weight Gain Program 
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Monsoon-Diet.html"
+                                           class="text-black">Monsoon Diet 
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="PCODorPCOS.html"
+                                           class="text-black">Pcod/Pcos
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Child-Nutrition.html"
+                                           class="text-black">Child Nutrition
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Thyroid-Disorder.html"
+                                           class="text-black">Thyroid Disorder
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Diabetes-management.html"
+                                           class="text-black">Diabetes Management
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="High-Lipid-and-Cholesterol.html"
+                                           class="text-black">High Lipid And Cholesterol
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="pregnancy-and-lactation.html"
+                                           class="text-black">Pregnancy And Lactation 
+                                        </a>
+                                    </li>
+                                
+                                    <li class="bg-custom text-black">
+                                        <a href="Hypertension-Diet.html"
+                                           class="text-black">Hypertension Diet
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                            
+                        </ul>
+                        </li>
+                    <li><a href="blogs_health.html">Health Feed</a></li>
+                    <li><a href="testimonial_SS.html">Success Stories</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="before_login" >
+                        <button href="#" onclick="openNav()" class="theme-btn btn-style-three text-white"
+                                style="padding: 7px 12px;border: 2px solid white  !important;">Register
+                        </button>
+                    </li>
+                    <li class="dropdown after_login"
+                        style="display: none" ><a href="/">Hi, <span
+                            class="name"></span></a>
+                        <ul id="fellow">
+                            
+                            <li>
+                                <a href="/clients/logout">Logout
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <br>
+                
+                
+                
+                
+                
+                
+                
+            </div><!-- /.Side-menu -->
+
+            <div class="social-icons">
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.facebook.com/EAT-without-GUILT-103521464681387/"><span
+                                class="fa fa-facebook-f"></span></a></li>
+                    <li><a href="None"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li><a href="None"><span
+                            class="fa fa-youtube"></span></a></li>
+                    <li><a href="https://www.instagram.com/invites/contact/?i=1e6c1eu3tl84h&amp;utm_content=4zzkwy0"><span
+                            class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+
+        </div><!-- / Hidden Bar Wrapper -->
+    </section>
+
+    <section class="page-title" ><div class="auto-container"><h1>Terms Of Service</h1></div></section><!--Page Info--><section class="page-info"><div class="auto-container clearfix"><div class="breadcrumb-outer"><ul class="bread-crumb clearfix"><li><a href="index.html">Home</a></li><li class="active">Terms of Service</li></ul></div></div></section><!--Sidebar Page--><div class="sidebar-page-container"><div class="auto-container"><div class="row clearfix"><!--Content Side--><div class="content-side col-lg-12 col-md-12 col-sm-12 col-xs-12"><!--Blog Details--><section class="blog-details post-details"><div class="news-style-one"><div class="lower-content"><h3 style="color:black;font-weight: 500">Description</h3><div class="text text-content"><p><br>By accepting these Terms and Conditions, you warrant that you have fully
+                                            read and understood the Terms and Conditions without any impairment in
+                                            judgment resulting from (but not limited to) mental illness, mental
+                                            handicap, intoxication, medication, or any other health or other problem
+                                            that could impair judgment.
+
+                                            <br>Please read the terms and conditions ("Terms and Conditions"), "Disclaimer"
+                                            and "Privacy Policy" carefully before registering and/or using the
+                                             website (the "Site").
+
+                                            <br>By visiting, accessing or registering on this Site, you unconditionally
+                                            accept to be bound by the terms and conditions provided herein below ("Terms
+                                            of Service"). If you do not agree to these Terms of Service, please do not
+                                            access or use this Site. You agree and confirm that the Terms of Service may
+                                            be amended from time to time without notice. Please ensure that you
+                                            periodically update yourself of the current version of the Terms of Service.
+                                            Information or advice provided on the Site by professionals should be used
+                                            merely as a guide rather than a definitive recommendation to adopt any
+                                            specific action or treatment. Eat Without Guilt, the owner of the
+                                            Site, ("") and professionals who offer services
+                                            through the Site accept no responsibility for any medical, legal or
+                                            financial events or outcomes related to services attained through the use of
+                                            the Site, which is being provided on an as is basis as a platform to get
+                                            health information.
+
+                                            <br>All users must be 18 years or older.
+
+                                            <br>The information on this Website (including but not limited to live chat,
+                                            emails, phone support) is provided for general informational purposes only
+                                            and SHOULD NOT be relied upon as a substitute for sound professional medical
+                                            advice, evaluation or care from your physician or other qualified healthcare
+                                            provider. Nothing on this Website should be used for treating or diagnosing
+                                            a medical or health condition or for replacing any relationship with your
+                                            physician or other qualified healthcare provider. The health information
+                                            furnished on this Website and the interactive responses (if any) furnished
+                                            by or through, this Website are not intended to or implied to be
+                                            professional medical advice. You are recommended to consult other sources
+                                            and confirm the information contained within this Website. Consult your own
+                                            physician regarding the applicability of any opinions or recommendations
+                                            with respect to your symptoms or medical condition. For medical concerns,
+                                            including decisions about medications and other treatments, you should
+                                            always consult your physician or other, qualified healthcare professional.
+                                            In serious cases, seek immediate assistance from emergency personnel. If you
+                                            have or suspect that you have a medical problem or condition, please contact
+                                            a physician or other qualified healthcare provider immediately. YOU SHOULD
+                                            NEVER DISREGARD MEDICAL ADVICE OR DELAY IN SEEKING IT BECAUSE OF SOMETHING
+                                            YOU HAVE READ ON THIS WEBSITE (including but not limited to live chat,
+                                            emails, phone support). No medications, diet supplements or treatments as
+                                            may be described on this Website should be taken or begun without first
+                                            consulting your physician or other healthcare provider.
+
+                                            <br>Nothing transmitted to or from this Site constitutes the establishment of a
+                                            doctor-patient relationship between you and any professional who uses
+                                             website. The site is not intended to prescribe
+                                            medicine and diagnose a medical condition. The Site is not intended to be
+                                            used to treat a medical emergency or medical condition. The Site is not
+                                            intended to be used to Advise or resolve legal, medical or financial issues
+                                            outside the scope of what has been agreed or provided. For any medical
+                                            emergency, immediately contact the emergency number in your country.
+                                             does not regularly review the posts on the Site
+                                            (excluding, however,  right to access accounts to
+                                            ensure that the system is working and/or in the case of any technical
+                                            dysfunction) and the views expressed therein are those of the posters and do
+                                            not necessarily reflect those of  , its owners,
+                                            managers, directors, employees, agents, partners, advertisers or affiliates.
+                                             assumes no responsibility for the posts or the
+                                            information contained therein, nor does it make any claims, promises or
+                                            guarantees about the accuracy, suitability or completeness of any of the
+                                            information on the Site or in the posts. All advice and/or information
+                                            obtained directly or indirectly from the Site are provided at your own risk.
+
+                                            <br>For health advice in particular, but not exclusively, before acting on any
+                                            of the advice, the user should confirm that such action is applicable and
+                                            suitable by referring to his or her own medical practitioner or attaining
+                                            the second and third opinion of other medical practitioners. The limitations
+                                            associated with consultations or other services exclusive of physical
+                                            examination, in person legal advice or onsite and extensive investigations
+                                            should be recognized. Neither  nor any of its owners,
+                                            managers, directors, employees, agents, partners, advertisers or affiliates
+                                            assumes any legal responsibility for any incorrect or misleading information
+                                            provided by any professional or contained within the Site.
+
+                                            <br>Access to the Site and Content may not be legal by certain persons or in
+                                            certain states or countries. If you access the Site from outside India, you
+                                            do so at your own risk and are responsible for compliance with the laws of
+                                            your jurisdiction. Provisions relating to the liability of
+                                             and its licensors, user submissions, Indemnity,
+                                            Jurisdiction, and Complete Agreement, survive the expiration or termination
+                                            of these Terms and Use for any reason whatsoever. 
+                                            makes no claim that the contents of the Site, such as text, graphics, images
+                                            and information obtained from service providers and any other material
+                                            contained on the Site (the "Content") is appropriate or may be downloaded in
+                                            a particular jurisdiction.
+
+                                            <br>You also agree that you understand that the professionals that participate
+                                            may or may not be affiliated with, employed by or agents of
+                                             and that we make no representations as to the
+                                            qualifications of any of the physicians who participate in the network. Any
+                                            listing, name, content, material of any professional or firm found on this
+                                            site does not constitute any endorsement or recommendations. When deciding
+                                            to take advice and/or hire any professional or firm, you should do your own
+                                            independent research as to the accuracy of the credentials expressed in the
+                                            Content.
+
+                                            <br>The Content is for informational purposes only. The Content is not intended
+                                            to be a substitute for face-to-face professional advice, diagnosis, or
+                                            treatment. Always seek the advice of a physician within your jurisdiction
+                                            with any questions you may have regarding a medical condition. Never
+                                            disregard professional medical advice or delay in seeking it because of
+                                            information provided by a professional through the Site. If you think you
+                                            may have a medical emergency, call your doctor or emergency services
+                                            immediately.  does not recommend or endorse any
+                                            specific tests, products, procedures, opinions, or other information that
+                                            may be mentioned on the Site. Reliance on any information provided by any
+                                            professional through the Site,  employees, others
+                                            appearing on the Site at the invitation of  , or other
+                                            visitors to the Site is solely at your own risk.
+
+                                            <br> may, without giving notice, delete any account or
+                                            information contained on the Site for any reason whatsoever.
+
+                                            <br>You agree that you will not use the Site to post any advertisement or other
+                                            commercial message. You agree that you will not post any knowingly false,
+                                            defamatory, inaccurate, abusive, harassing, obscene, sexually oriented or
+                                            threatening message or material that is illegally invasive of another
+                                            person's privacy. Upon receiving any complaints,  will
+                                            attempt to delete any inappropriate posts as quickly as possible; however,
+                                            the submissions are generally posted in real-time and are not reviewed by
+                                             before they are posted to the Site.
+
+                                            <br>The Content ("Copyright Content") is protected by copyright under both
+                                            Central and State laws, and foreign laws. Title to the Copyright Content
+                                            remains with  or its licensors. Any use of the
+                                            Copyright Content not expressly permitted by these Terms and Conditions is a
+                                            breach of the Terms and Conditions and may violate copyright, trademark, and
+                                            other laws. Inquiries or applications for permission to copy any Copyright
+                                            Content otherwise than is permitted by these Terms and Conditions should be
+                                            directed to .
+
+                                            <br>Content and features on the Site, including these Terms and Conditions are
+                                            subject to change or termination without notice in the editorial discretion
+                                            of  . All rights not expressly granted herein are
+                                            reserved to  and its licensors. If you violate any of
+                                            these Terms and Conditions, your permission to use the Copyright Content
+                                            automatically terminates and you must immediately destroy any copies you
+                                            have made of any portion of the Copyright Content.
+
+                                            <br>You agree that you use the Site on your own free will and it is not guided
+                                            by any promotional emails, phone calls and advertisements from
+                                             and its affiliates and partners. The use of the Site
+                                            and the Content is at your own risk. When using the Site, information will
+                                            be transmitted over a medium which, in many cases, is beyond the control and
+                                            jurisdiction of  . Accordingly, 
+                                            assumes no liability for or relating to the delay, failure, interruption, or
+                                            corruption of any data or other information transmitted in connection with
+                                            use of the Site. The Site and the Content are provided on an "as is" basis.
+                                             , its licensors, and its suppliers, to the fullest
+                                            extent permitted by law, disclaim all warranties, either express or implied,
+                                            statutory or otherwise, including but not limited to the implied warranties
+                                            of merchantability, non-infringement of third parties' rights, and fitness
+                                            for particular purpose. Specifically,  makes no
+                                            representations, warranties or guarantees about the following:
+
+                                            <br>The accuracy, reliability, completeness, correctness, or timeliness of the
+                                            Content, software, text, graphics, links, or communications provided on or
+                                            through the use of the Site.
+                                            The satisfaction of government regulations or the laws of any jurisdiction
+                                            with regard to the ability to use the Site or requiring disclosure of
+                                            information contained on the Site.
+
+                                            <br>To the fullest extent permitted by law, neither  , its
+                                            licensors, its suppliers, nor any third parties mentioned on the Site shall,
+                                            in any event whatsoever, be liable for any damages (including, without
+                                            limitation, incidental and consequential damages, personal injury/wrongful
+                                            death, lost profits, or damages resulting from lost data or business
+                                            interruption, including any computer virus) resulting from the use or
+                                            inability to use the Site or the Content, whether based on warranty,
+                                            contract, tort, or any other legal theory, and whether or not
+                                             is advised of the possibility of such damages.
+
+                                            <br>To the fullest extent permitted by law any claims arising in connection with
+                                            your use of the Site and any of its Content, must be brought within one (1)
+                                            year of the date of the event giving rise to such action occurred.
+                                             does not endorse any professional and does not intend
+                                            to be a source of advertising, solicitation or legal advice on the behalf of
+                                            any professional. To the fullest extent permitted by law,
+                                             is not responsible for the content of linked
+                                            third-party sites, sites framed within the Site, or third-party
+                                            advertisements, and does not make any representations regarding their
+                                            content or accuracy. Your use of third-party websites is at our own risk and
+                                            subject to the terms and conditions of use for such sites.
+
+                                            <br> does not endorse any product advertised on the Site.
+
+                                            <br>The information on this Website is not exhaustive and is provided "AS IS"
+                                            and without any warranties of any kind, either express or implied. All
+                                            implied warranties of merchantability and fitness for a particular purpose
+                                            or use are hereby excluded. Disclaimer of Liability of
+                                            , if any, for damages (including without limitation
+                                            liability arising out of tort, strict liability, negligence, contract or
+                                            patent or copyright infringement) shall not exceed the lesser of (i) the
+                                            fees paid, if any, to  for the particular information
+                                            or service provided on this Website or (ii) Rs.1000 (Indian Rupees).
+                                            .com shall not be liable under any theory of
+                                            indemnity. In no event shall  be liable for any
+                                            damages other than the amount referred to above. All other damages, direct
+                                            or indirect, special, incidental, consequential or punitive are hereby
+                                            excluded to the fullest extent permitted by law, even if
+                                            .com has been advised of the possibility of such
+                                            damages.  expressly disclaims and DOES NOT WARRANT
+                                            that the functioning of this Website will be uninterrupted or error free;
+                                            that any errors will be corrected; that any information on this Website is
+                                            complete, accurate (although  strives for accuracy),
+                                            or timely (or will be updated); and that this Website, or the server that
+                                            makes it available, is or will be free of viruses or other harmful
+                                            components. You are solely responsible for any damage to your computer
+                                            system or loss of data that results from downloading any material from this
+                                            Website.
+
+                                            <br>YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT THE  , ITS
+                                            LICENSORS, SUPPLIERS AND BUSINESS PARTNERS NOT RESPONSIBLE FOR THE RESULTS
+                                            OF YOUR DECISIONS RESULTING FROM THE USE OF THIS WEBSITE OR THE INFORMATION
+                                            CONTAINED HEREIN, INCLUDING BUT NOT LIMITED TO, YOUR CHOOSING TO SEEK OR NOT
+                                            TO SEEK PROFESSIONAL MEDICAL CARE, OR YOUR CHOOSING OR NOT CHOOSING SPECIFIC
+                                            TREATMENT BASED ON THE INFORMATION ON OR ACCESSED THROUGH THIS WEBSITE
+                                            (Including but not limited to Live Chat, Email, Phone).
+
+                                            <br>You agree that you are solely responsible for anything you post on the Site
+                                            and that you agree to defend, indemnify, and hold  ,
+                                            its officers, directors, employees, agents, licensors, and suppliers,
+                                            harmless from and against any claims, actions or demands, liabilities and
+                                            settlements including without limitation, reasonable legal and accounting
+                                            fees, resulting from, or alleged to result from, your violation of these
+                                            Terms and Conditions or any claims based upon your posts/submissions on the
+                                            Site. You further consent to abide by the spam policies. Failure to do so
+                                            may result in cancellation of your account with  . The
+                                            use of this Site is entirely at your own risk, and in no event shall
+                                             be liable for any direct, indirect, incidental,
+                                            consequential, special, exemplary, punitive, or any other monetary or other
+                                            damages, fees, fines, penalties, or liabilities arising out of or relating
+                                            in any way to this Site, or sites accessed through this Site, and/or content
+                                            or information provided herein. Your sole and exclusive remedy for
+                                            dissatisfaction with the Site is to stop using the Site. Access to the Site
+                                            may not be legal by certain persons or in certain states or countries. If
+                                            you access the Site from outside India, you do so at your own risk and are
+                                            responsible for compliance with the laws of your jurisdiction.
+
+                                            <br>You expressly understand and agree that:
+
+                                            <br>Your use of  is at your sole risk. the site is
+                                            provided on an "as is" basis and without warranty of any kind. to the
+                                            maximum extent permitted by law,  expressly disclaims
+                                            all warranties and conditions of any kind, whether express or implied.
+                                             does not make any warranty 1) that the site will meet
+                                            your requirements or is merchantable or fit for a particular purpose, 2)
+                                            that the site will be error-free or bug- free, 3) regarding the security,
+                                            reliability, timeliness, or performance of the site, 4) that any errors in
+                                            the site will be corrected, 5) accuracy, suitability or completeness of the
+                                            information contained in the site, 6) regarding the qualifications of the
+                                            professionals that provide services or advice on the site, 7) any incorrect
+                                            information or advice provided by the professionals or contained within the
+                                            site, 8) for any medical, legal or financial events or outcomes related to
+                                            services attained through the use of this site and 9) delay in calling back
+                                            or reconnecting, to obtain complete advice from the professional 10) any
+                                            information or materials obtained by using this site, 11) your choice to
+                                            seek professional medical advice, or your choice of choosing a specific
+                                            service/package based on the information provided through this site, is done
+                                            at your sole discretion and/or risk.
+
+                                            <br>You expressly agree that exclusive jurisdiction for any dispute with
+                                             , or in any way relating to your use of the Site,
+                                            resides in the courts of the India and you further agree and expressly
+                                            consent to the exercise of personal jurisdiction in the courts of the Delhi,
+                                            India in connection with any such dispute including any claim involving
+                                             or its affiliates, subsidiaries, employees,
+                                            contractors, officers, directors, telecommunication providers, and content
+                                            providers.
+
+                                            <br>These Terms and Conditions are governed by the internal substantive Indian
+                                            laws of the land, without respect to its conflict of laws principles. If any
+                                            provision of these Terms and Conditions is found to be invalid by any court
+                                            having competent jurisdiction, the invalidity of such provision shall not
+                                            affect the validity of the remaining provisions of these Terms and
+                                            Conditions, which shall remain in full force and effect. No waiver of any of
+                                            these Terms and Conditions shall be deemed a further or continuing waiver of
+                                            such term or condition or any other term or condition.
+
+                                            <br>These Terms and Conditions constitute the entire agreement between the
+                                            parties and superceded all other agreements relating to the subject matter,
+                                            and set out the complete legal relationship between 
+                                            and any other party arising from or connected with the subject matter. For
+                                            the voidance of doubt, in the case of any conflict between these Terms and
+                                            Conditions, and any other agreement, these www..com
+                                            Terms and Conditions apply only.
+
+                                            <br> reserves the right to place any third party
+                                            advertisements on the Site at any time and without notice or liability.
+                                             reserves the right to charge 
+                                            Account holders in the future with prior notice. 
+                                            Account holders are not, however, obliged to pay for such account membership
+                                            retrospectively.  reserves the right to release
+                                            professionals' responses in circumstances where a client has paid (or a
+                                            professional has waived) the requisite fee owing to technical difficulties,
+                                            if and when necessary.  reserves the right to limit
+                                            account holders use of  Accounts. Questions or
+                                            comments regarding the Site should be directed by electronic mail to
+                                            . The contents on the portal are provided by
+                                             for use by the online users as a quick reference of
+                                            information about doctors, hospitals and other healthcare services
+                                            providers. The listing of the doctors, hospitals and other healthcare
+                                            services providers on the portal is not intended as a tool for verifying the
+                                            credentials, qualifications, or abilities of any person or organization.
+                                            Inclusion in the Directory Listing does not imply recommendation or
+                                            endorsement nor does omission in the Directory Listing imply
+                                             disapproval.  endeavors to list
+                                            only the registered medical practitioners but  has not
+                                            verified their credentials. Before acting on any of the suggestions from the
+                                            doctors listed on , please discuss with your treating
+                                            physician. Always seek the advice of your physician or other qualified
+                                            health provider with any questions you may have regarding a medical
+                                            condition. Never disregard professional medical advice or delay in seeking
+                                            it because of something you have read on  website or
+                                            have had Live online chat or phone call or Email communication with a
+                                             team member including the 
+                                            doctors.
+
+                                            <br>Any information provided by  employees including the
+                                            doctors on helpline (Phone, Live Chat and Email) is provided to general
+                                            public to make a more informed decision.  will not be
+                                            liable for any damages or any loss (including that of health, life, limb or
+                                            livelihood) of any kind because of following the advice or instruction given
+                                            by  employees, associates, contractors and online
+                                            users.
+
+                                            <br>You are prohibited from republishing, selling, duplicating, or "scraping"
+                                            for commercial or any other purpose whatsoever, the Directory Listing or any
+                                            of the data or other information contained therein, in whole or in part, in
+                                            any medium whatsoever.
+
+                                            <br>The Directory Listing is provided on an "AS-IS" basis.
+                                             disclaims all warranties, either express or implied,
+                                            including but not limited to the implied warranties of merchantability and
+                                            fitness for particular purpose. Without limiting the foregoing,
+                                             does not warrant or represent that the Directory
+                                            Listing or any part thereof is accurate or complete. You assume full
+                                            responsibility for the communications with any doctor or hospital or other
+                                            healthcare services providers you contact through the Directory Listing.
+                                             shall in no event be liable to you or to anyone for
+                                            any decision made or action taken by you in the reliance on information
+                                            provided on our portal.
+
+                                            <br> will not be liable for any damages of any kind
+                                            arising from the use of this site or phone service or email communication,
+                                            including, but not limited to, direct, indirect, incidental, punitive or
+                                            consequential damages. By using the  Portal and the
+                                            Phone and Email services, you agree to the Terms and Conditions.
+
+                                            <br>Your use of the site, the services and the content is subject to the above
+                                            Terms & Conditions, Privacy Policy & Disclaimer. If you find these
+                                            Conditions unacceptable, we request that you do not use this portal
+                                        </p></div><div class="post-bottom clearfix"></div></div></div><!--Comments Area--></section></div><!--End Content Side--></div></div></div>
+
+
+    <footer class="main-footer">
+        <div class="auto-container">
+
+            <!--Widgets Section-->
+            <div class="pad" style="padding-bottom: 0px !important;">
+                <div class="row clearfix">
+                    <div class="col-md-4 footer-column">
+                        <div class="footer-widget links-widget">
+                            <h2>Quick Links</h2>
+                            <div class="widget-content">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="list">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="Privacy-Security.html">Privacy & Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="list">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="Refund-Policy.html">Refund Policy</a></li>
+                                            <li><a href="Disclaimer.html">Disclaimer</a></li>
+                                            <li><a href="Terms-of-Service.html">Terms Of Service</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 footer-column">
+                        <div class="footer-widget contact-widget">
+                            <h2>Contact Us</h2>
+                            <div class="widget-content">
+                                <ul class="contact-info">
+                                    <li><span
+                                            class="icon flaticon-telephone-1"></span><strong>Phone:</strong>
+                                        +91-9899199767
+                                    </li>
+                                    <li><span
+                                            class="icon flaticon-interface-4"></span><strong>Email:</strong>
+                                        withoutguilteat@gmail.com
+                                    </li>
+                                    <li><span
+                                            class="icon flaticon-location"></span><strong>Address:</strong>
+                                        B-15 bhagwan das nagar east punjabi bagh, Bhagwan das naga
+                                        , New Delhi, Delhi
+                                        , India ,110026
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer-column">
+                        <div class="footer-widget contact-widget">
+                            <img src="images/footer.png" alt="Eat Without Guilt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Footer Bottom-->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="copyright">&copy; 2020 Powered by <a
+                                href="https://www.zoconut.com" class="author-name" target="_blank"><img
+                                src="images/home/png.webp" class="fl" alt="Zoconut"></a></div>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="footer-social">
+                            <li>
+                                <a href="https://www.facebook.com/EAT-without-GUILT-103521464681387/"><span
+                                        class="fa fa-facebook-f"></span></a></li>
+                            <li><a href="None"><span class="fa fa-twitter"></span></a>
+                            </li>
+                            <li><a href="None"><span
+                                    class="fa fa-youtube"></span></a></li>
+                            <li><a href="https://www.instagram.com/invites/contact/?i=1e6c1eu3tl84h&amp;utm_content=4zzkwy0"><span
+                                    class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="fa  fa-angle-up"></span></div>
+<input type="hidden" name="csrfmiddlewaretoken" value="NYCNxhK96jTOv1CmuDEJoRCvyEcu1bFDb35KjIXoqnBnAl9FSnFzDsscgQCkYJNq">
+
+
+<div class="modal fade" id="exampleModals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 10px;">
+            <div class="modal-body" style="padding:10px 30px;color:#3f4828;border: 1px solid #3f4828;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row clearfix"><!--Title Column-->
+                    <div class="title-column col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="text-align: center">
+                        <div class="inner-box"
+                             style="visibility: visible;">
+                            <h4 style="font-size:22px; text-align: center">Download the e-Diet App Now</h4>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-description">
+                                <h4 style="margin-top:5px; text-align: center;"><a
+                                        href="https://play.google.com/store/apps/details?id=com.dietitio.ediet&hl=en">
+                                    <img class="" src="images/home/google-play.png" alt="ediet Android App"
+                                         height="auto" width="95px"></a>
+                                    <a href="https://apps.apple.com/in/app/e-diet-formerly-dietitio/id1465083090"> <img
+                                            class="graf" src="images/home/app-store.png" alt="ediet Ios App"
+                                            height="auto" width="95px"></a></h4>
+                            </div>
+                            <h2 style="font-size:22px;text-align: center">Or</h2>
+                                <h4>Explore my <a href="/services/" type="button" class="theme-btn btn-circle" style="padding: 4px!important;color:rgba(33, 46, 2, .9);">Services
+                                    </a>
+                                </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="background-color: white"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <style>
+        .modal-backdrop.in {
+            z-index: 998 !important;
+        }
+    </style>
+
+
+<div class="modal fade" id="book_appoint" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="border-radius: 10px;">
+            <form id="appointmentForm" style="margin: 0px !important;border-radius: 10px">
+                <div class="modal-header">
+                    <h4 class="modal-title">Book Appointment
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="text-white" aria-hidden="true">&times;</span>
+                        </button>
+                    </h4>
+
+                </div>
+                <div class="modal-body col-md-12 p-5" style="background: #f6f6f6;padding-bottom:20px">
+
+                    <div class="form-group col-md-4">
+
+                        <div id="datetimepicker12" class="m-b-5"></div>
+                        <input type="hidden" id="date_" name="date">
+                        <div>
+                            <label class="col-md-12" for="example-text">Appointment Type
+                            </label>
+                            <div class="col-md-12" style="padding-top:6px;">
+                                <select class="form-control" name="type" style="width: 100%;" required>
+                                    <option value="In Person">In Person</option>
+                                    <option value="Call">Online</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="NYCNxhK96jTOv1CmuDEJoRCvyEcu1bFDb35KjIXoqnBnAl9FSnFzDsscgQCkYJNq">
+                            <label class="col-md-12">Note</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="note" rows="3"></textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group col-md-8"><h4 class="font-medium"> Select Slot</h4>
+                        <div class="day_slots p-3">
+                            <ul class="col-md-12 row" id="slot_container">
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer" style="background: #f6f6f6;">
+                    <div class="col-md-12 text-center">
+                        <div class="form-group">
+                            <input type="submit" class="button bg-primary p-2" value="Book" id="input-submit"
+                                   style="width: 100px !important;">
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <style>
+        .modal-backdrop.in {
+            z-index: 998 !important;
+        }
+    </style>
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Query Form
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </h3>
+
+            </div>
+            <div class="modal-body" style="background: #f6f6f6;padding:0px">
+                <div class="auto-container" style="padding:15px  !important;">
+                    <div class="form-container">
+                        <div style="height: 20px">
+                            <div class="alert_lead col-md-12 text-left m-0 p-l-0">
+                                <h6 class="message m-0"
+                                    style="color:#c9231e;text-transform: capitalize !important;"></h6>
+                            </div>
+                        </div>
+                        <form class="contactForm1 row m-t-0">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="NYCNxhK96jTOv1CmuDEJoRCvyEcu1bFDb35KjIXoqnBnAl9FSnFzDsscgQCkYJNq">
+                            <div class="col-md-12 cf">
+                                <input type="text" id="input-name" name="name" placeholder="Name*"
+                                       required="">
+                            </div>
+                            <div class="col-md-12  cf">
+                                <div style="display: flex;">
+                                    <select name="ccode" class="select_country_modal" required>
+                                        <option value="0" id="select_country_modal">Country</option>
+                                    </select>
+                                    <input placeholder="Phone no.*" type="number" class="" name="phone"
+                                           id="recipient-name"
+                                           style="width:175px !important;" required>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 m-b-3  cf">
+                                <input type="email" name="email" id="input-email" placeholder="Email address">
+                            </div>
+                            <div class="col-md-12  cf">
+                                <select name="gender" class="gender_val" id="form1Gender" required>
+                                    <option val="">Gender*</option>
+                                    <option val="male">Male</option>
+                                    <option val="female">Female</option>
+                                    <option val="other">Other</option>
+
+                                </select>
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                       value="6WvEPXPYTuqrXSAExfsUFXrGoZWEpKZxRegkJNhCFBbykW7eFlkX05f80ORSBFmV">
+
+                            </div>
+                            <div class="col-md-12   cf">
+                                <textarea class="col-md-12 m-b-4" name="message"
+                                          type="text"
+                                          id="input-message"
+                                          placeholder="Message"></textarea>
+                                <input type="submit" class="newbtn" value="Submit" id="input-submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-description  text-center"><h4
+                        class="font-medium text-black">Download Our App Now
+
+                </h4>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.dietitio.ediet&amp;hl=en"><img
+                            class="" src="images/home/google-play.png" alt="ediet Android App" height="35"
+                            width="100"></a>
+                    <a href="https://apps.apple.com/in/app/e-diet-formerly-dietitio/id1465083090"><img class=""
+                                                                                                       src="images/home/app-store.png"
+                                                                                                       alt="ediet Ios App"
+                                                                                                       height="35"
+                                                                                                       width="100"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="client_status" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 10px;">
+            <div class="modal-body" style="padding:10px 30px;color:#3f4828;border: 1px solid #3f4828;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row clearfix"><!--Title Column-->
+                    <div class="title-column col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="text-align: center">
+                        <div class="inner-box"
+                             style="visibility: visible;">
+                            <h4 style="font-size:22px; text-align: center" class="client_status_text">Download the e-Diet App Now</h4>
+                            <br>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-description client_proceed">
+                                <button class="btn btn-success client_yes">
+                                    YES
+                                </button>
+                                <button  class="btn btn-danger client_no">
+                                    NO
+                                </button>
+                            </div>
+                            <h2 style="font-size:22px;text-align: center"></h2>
+                            <h2 style="font-size:22px;text-align: center"></h2>
+                                <h4 style="margin-top: 50px;" class="client_proceed" >Do you still want to proceed ??
+                                </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer b-0" style="background-color: white;border:none !important;"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-success">
+    <strong>Success!</strong>
+</div>
+
+<script>
+    var is_authenticate = 'False';
+    var is_lead = '';
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/jquery.fancybox.pack.js"></script>
+    <script src="static/js/jquery.fancybox-media.js"></script>
+    <script src="static/js/owl.js"></script>
+    <script src="static/js/wow.js"></script>
+    <script type="text/javascript" src="static/js/owl.carousel.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script src="static/js/script.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="static/js/ajax_register.js"></script>
+<script src="static/js/appointment.js"></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>
