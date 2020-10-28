@@ -207,14 +207,28 @@ include 'navbar.php' ?>
                   <div class="info-style-one" style="">
                     <ul>
                       <li>
-                        <div class="icon-box"><span class="fa fa-globe"></span></div><h4>Address :</h4><div class="text"><b>B-15 bhagwan das nagar east punjabi bagh, Bhagwan das naga
-                          , New Delhi, Delhi
-                          , India ,110026</b></div>
+                        <div class="icon-box"><span class="fa fa-globe"></span></div><h4>Address :</h4><div class="text"><b> <?php echo $address ?> </b></div>
                       </li>
 
                       <li>
-                        <div class="icon-box"><span class="flaticon-envelope"></span></div><h4>Ask Some Thing Us :</h4><div class="text"><b>withoutguilteat@gmail.com</b></div></li><li><div class="icon-box"><span class="flaticon-technology-1"></span></div><h4>Call Us:</h4><div class="text"><b>+91-9899199767</b></div></li><li><div class="icon-box"><span class="flaticon-calendar-1"></span></div><h4>Appointment:</h4><div class="text"><b>MON - SAT : 10am to 2pm and 4pm - 8 pm</b></div><div class="text"><span style="color:#3f4828"> ( Prior Appointment is Recommended)</span></div>
-                        </li>
+                        <div class="icon-box">
+                          <span class="flaticon-envelope"></span>
+                        </div>
+                        <h4>Ask Some Thing Us :</h4>
+                        <div class="text">
+                          <b> <?php echo $email ?> </b>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="icon-box">
+                          <span class="flaticon-technology-1"></span>
+                        </div>
+                        <h4>Call Us:</h4>
+                        <div class="text">
+                          <b> <?php echo $mobile_show ?> </b>
+                        </div>
+                      </li>
 
                       </ul>
 
